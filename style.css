@@ -9,7 +9,10 @@
 body {
   font-family: sans-serif;
   background-color: #333;
-  color: rgb(222, 132, 242);
+  background-image: url("./tile.png");
+  background-position: center;
+  background-attachment: fixed;
+  color: gold;
 
   overflow-x: hidden;
 }
@@ -226,4 +229,50 @@ footer {
     opacity: 0;
     transform: scaleX(40) scaleY(20);
   }
+}
+
+/* Cards */
+
+.card {
+  position: relative;
+  perspective: 500px;
+  background-color: transparent;
+}
+.side {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transition: all 400ms ease-in;
+}
+.front {
+  background-color: #444;
+  transform: rotateY(0);
+}
+.back {
+  background-color: rgb(46, 44, 44);
+  transform: rotateY(-180deg);
+  background-image: url("./no-face\ cat.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+}
+
+.card:hover .front {
+  transform: rotateY(-180deg);
+}
+.card:hover .back {
+  transform: rotateY(-360deg);
+}
+
+/* Frosted Glass */
+.section-4 {
+  background-color: transparent;
+  backdrop-filter: blur(10px) brightness(75%);
+  border-radius: 10px;
 }
