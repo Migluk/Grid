@@ -12,7 +12,8 @@ body {
   background-image: url("./tile.png");
   background-position: center;
   background-attachment: fixed;
-  color: rgb(227, 136, 234);
+  background-size: 100px;
+  color: gold;
 
   overflow-x: hidden;
 }
@@ -255,7 +256,7 @@ footer {
   transform: rotateY(0);
 }
 .back {
-  background-color: rgb(46, 44, 44);
+  background-color: rgb(66, 66, 67);
   transform: rotateY(-180deg);
   background-image: url("./no-face\ cat.jpg");
   background-repeat: no-repeat;
@@ -271,8 +272,39 @@ footer {
 }
 
 /* Frosted Glass */
-.section-4 {
+.section-4,
+.section-5 {
   background-color: transparent;
   backdrop-filter: blur(10px) brightness(75%);
   border-radius: 10px;
+}
+
+/* Gražus tekstas */
+
+@font-face {
+  font-family: Sterion;
+  src: url(./Sterion-BLLld.ttf);
+}
+
+.bg-txt {
+  font-family: Sterion;
+  font-size: 17vw;
+  letter-spacing: 5px;
+
+  background-image: url(./wallhaven-exjvek.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  background-clip: text;
+  color: transparent;
+
+  /* text-shadow: 2px 2px 3px #fff; */
+
+  -webkit-text-stroke: 2px #fff;
+  transition: all 200ms;
+}
+
+.bg-txt:hover {
+  transform: skewX(-5deg) rotate(-5deg);
 }
